@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
+using System;
 
 namespace MyPlugins
 {
-    public class CategoryCountViewModel
+    public class CategoryCountViewModel : IComparable<CategoryCountViewModel>, INotifyPropertyChanged
     {
         private string _category;
         private int _count;
@@ -37,6 +33,12 @@ namespace MyPlugins
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public int CompareTo(CategoryCountViewModel other)
+        {
+            // Сравнение по алфавиту
+            return string.Compare(Category, other?.Category, StringComparison.OrdinalIgnoreCase);
         }
     }
 }

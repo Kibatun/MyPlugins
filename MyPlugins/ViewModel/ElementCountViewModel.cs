@@ -42,7 +42,7 @@ namespace MyPlugins
                 {
                     Category = x.Key,
                     Count = x.Value
-                }));
+                }).OrderBy(x => x)); // Сортировка по алфавиту
         }
 
         private Dictionary<string, int> CountElementsByCategory(ICollection<Element> elements)
