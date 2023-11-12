@@ -1,0 +1,32 @@
+﻿<Window
+	x:Class="MyPlugins.CountResultsWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="Количество элементов в проекте по категориям"
+	Width="370"
+	Height="300"
+	MinWidth="320"
+	MinHeight="200">
+	<Grid>
+		<DataGrid
+			Name="CategoryDataGrid"
+			Margin="0,0,0,2"
+			AutoGenerateColumns="False"
+			CanUserResizeColumns="True">
+			<DataGrid.Columns>
+				<DataGridTextColumn
+					Width="*"
+					MinWidth="100"
+					Binding="{Binding Category}"
+					Header="Категория"
+					IsReadOnly="True" />
+				<DataGridTextColumn
+					Width="*"
+					MinWidth="50"
+					Binding="{Binding Count}"
+					Header="Количество элементов"
+					IsReadOnly="True" />
+			</DataGrid.Columns>
+		</DataGrid>
+	</Grid>
+</Window>

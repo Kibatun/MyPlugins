@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Name>ElementCountPlugin</Name>
+		<AddInId>552FC9E3-FA3A-4168-863F-F0AF36389270</AddInId>
+		<VendorId></VendorId>
+		<VendorDescription></VendorDescription>
+		<Description>Подсчёт элементов по категориям</Description>
+		<Version>1.0</Version>
+		<Command>
+			<Name>ElementCountPlugin</Name>
+			<InternalName>ElementCountPlugin</InternalName>
+			<Description>Подсчёт элементов по категориямy</Description>
+			<VisibilityMode>AlwaysVisible</VisibilityMode>
+			<AddInId>552FC9E3-FA3A-4168-863F-F0AF36389270</AddInId>
+			<VendorId></VendorId>
+			<VendorDescription></VendorDescription>
+			<JournalDescription>Подсчёт элементов по категориям</JournalDescription>
+			<LanguageType>RUS</LanguageType>
+		</Command>
+	</AddIn>
+</RevitAddIns>
