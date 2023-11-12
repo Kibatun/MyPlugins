@@ -53,15 +53,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryCountViewModel.cs" />
-    <Compile Include="CountResultsWindow.xaml.cs">
+    <Compile Include="ViewModel\CategoryCountViewModel.cs" />
+    <Compile Include="View\CountResultsWindow.xaml.cs">
       <DependentUpon>CountResultsWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ElementCountPlugin.cs" />
+    <Compile Include="Model\ElementCounterModel.cs" />
+    <Compile Include="ExternalCommands\ElementCountPlugin.cs" />
+    <Compile Include="ViewModel\ElementCountViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="CountResultsWindow.xaml">
+    <Page Include="View\CountResultsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -69,5 +71,6 @@
   <ItemGroup>
     <None Include="ElementCount.addin" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
